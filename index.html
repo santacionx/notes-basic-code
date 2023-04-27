@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="stage1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Logic</title>
+</head>
+
+<body class="#000000 black">
+    <nav class="#000000 black">
+        <div class="nav-wrapper ">
+            <a href="#" class="brand-logo">logic</a>
+
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card #263238 blue-grey darken-4">
+                <div class="card-content white-text">
+                    <span class="card-title">Palindrome : </span>
+                    <h5>
+                        <ol>
+                            <li> Approach :traverse from last to first each digit : lastdigit</li>
+                            <br>
+                            <li> main logic: rev*=10+lastdigit</li>
+                            <br>
+                            <li> time complexity: theta(d)</li>
+                            <br>
+                            <li> ex: 1001 palindrome 121: palindome , 122: not palindrome</li>
+                        </ol>
+
+
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card  #263238 blue-grey darken-4">
+                <div class="card-content white-text">
+                    <span class="card-title">Factorial : </span>
+                    <h5>
+                        <ol>
+                            <li> Approach 1 :traverse from first to last number : multiply</li>
+                            <br>
+                            <li> Approach 2 :recursion from last to first number : theta n</li>
+                            <br>
+                            <li> main logic: n*=i</li>
+                            <br>
+                            <li> time complexity: theta(n) Approach 1 better wrt time and space</li>
+                            <br>
+                            <li> ex: input 3 : 3x2x1=6 </li>
+                            <li>Facts : number of 5s in factorial is more</li>
+                        </ol>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card #263238 blue-grey darken-4">
+                <div class="card-content white-text">
+                    <span class="card-title">GCD : </span>
+                    <h5>
+                        <ol>
+                            <LI>Fact: to finds the largest sub blocks that fills box equally </LI> <br>
+                            <li> Approach 1 :find min(a,b) : res then itr untill if both a&b rem equally otherwise
+                                decrease res | O(min(a,b))</li>
+                            <br>
+                            <li>Approach 2 :repeatedly subtracting the smaller number from the larger number until one
+                                of the numbers becomes zero. </li>
+                            <li> Approach 3 : extended euclid's Algorithm </li>
+                            <br>
+                            <li> main logic: gcd(b,a%b) or gcd(a,b)=gcd(a-b,b)</li>
+                            <br>
+                            <li> time complexity:extended O(log n)</li>
+                            <br>
+
+                        </ol>
+
+
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card #263238 blue-grey darken-4">
+                <div class="card-content white-text">
+                    <span class="card-title">Trailing Zeros in Factorial : </span>
+                    <h5>
+                        <ol>
+                            <li> Approach 1 :find Factorial store in res and traverse result in reverse(n/10) and find
+                                digit==0 increment count once done return count : problem : overflow issues(cant store
+                                if a number out of range of data type) and o(n)</li>
+                            <br>
+                            <li> Approach 2 : count 5's becoz ends with 0 : itr i->5 to n step: i*5theta(logn)</li>
+                            <br>
+                            <li> main logic: count+=n/i (more than one 5's count )</li>
+                            <br>
+                            <li> time complexity: theta(logn) Approach 2 better wrt time and space n/i is logic for all
+                                numbers</li>
+                            <br>
+                            <li> ex: 5: op:1</li>
+                        </ol>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card #263238 blue-grey darken-4">
+                <div class="card-content white-text">
+                    <span class="card-title">check prime : </span>
+                    <h5>
+                        <ol>
+                            <li> Approach 1 :itr 2 to n if rem is 0 not palindrome : O(N)</li>
+                            <br>
+                            <li>Approach 2 :itr 2 to sqr-root(n)/i*i<n : becoz divisors are appear in pairs :> root n
+                                    there will be pair for sure: o(sqr-root(n)) but large no problem</li>
+                            <li> include these -> first so it wont enter the apprraoac 2 :check div by 2 and 3 we can
+                                optimize the solution</li>
+                            <br>
+                            <li> Approach 3 : extended euclid's Algorithm </li>
+                            <br>
+                            <li> main logic: itr[ 5 ->n step : i+6 ] (n%i==0 || n%i+2 ==0) </li>
+                            <br>
+                            <li> time complexity:extended O(sqrt-root n)</li>
+                            <br>
+
+                        </ol>
+
+
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card #263238 blue-grey darken-4">
+                <div class="card-content white-text">
+                    <span class="card-title">Prime Factors : </span>
+                    <h5>
+                        <ol>
+                            <li> {
+                                if(n<=1) return ; <br>
+                                    while(n%2 ==0) print(2) n=n/2 while( n%3==0) print(3) n=n/3; <br>
+                                    for(i=5;i*i<=n;i+=6){ <br>
+                                        while(n%i==0)
+                                        {
+                                        print(i)
+                                        n=n/i;
+                                        }
+                                        while(n%i+2==0)
+                                        {
+                                        print(i+2)
+                                        n=n/i+2;
+                                        }
+                                        }
+                                        check for the powers
+                                        if(n>1 ) print(n)
+                                        }
+                            </li>
+                            <br>
+
+                        </ol>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card #263238 blue-grey darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">ALL DIVISORS : </span>
+                        <h5>
+                            <ol>
+                                <LI>Fact:  divisors always appears in pairs & one of the divisor in every pair is smaller than or equal to sqrt(n)</LI> <br>
+                                <li> Approach 1 :itr for 2 to sqrt n-1 print the n%i==0 then aonce this loop ends itr from n to 1 and  check and print</li>
+                                <br>
+                                <li> time complexity:extended O(sqrt n)</li>
+                                <br>
+    
+                            </ol>
+    
+    
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card #263238 blue-grey darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">SIEVE OF ERATOSTHENES  :PRIME NUMBER <=N </span>
+                        <img class="materialboxed"  src="sne.jpeg">
+                        <h5>
+                            <ol>
+                                <li> Approach 1 NAIVE: 2 TO N CHECK PRIME AND PRINT :O(N*SQRT(N))</li>
+                                <br>
+                                <li> Approach 2 :SIEVE OF ERATOSTHENES </li>
+                                <br>
+                                <li> main logic: count+=n/i (more than one 5's count )</li>
+                                <br>
+                                <li> time complexity: theta(logn) Approach 2 better wrt time and space n/i is logic for all
+                                    numbers</li>
+                                <br>
+                                <li> ex: 5: op:1</li>
+                            </ol>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card #263238 blue-grey darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">SIEVE OF ERATOSTHENES  :src code <=N </span>
+                        <img class="materialboxed"  src="o.jpeg">
+                
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card #263238 blue-grey darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">SIEVE OF ERATOSTHENES   </span>
+                        <img class="materialboxed"  src="u.jpeg">
+                
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card #263238 blue-grey darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">power of a number </span>
+                        <img class="materialboxed"  src="pow.jpeg">
+                
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+
+</html>
